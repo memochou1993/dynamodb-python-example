@@ -1,10 +1,5 @@
-import boto3
+from client import dynamodb_client, table_name;
 
-session = boto3.Session()
-
-dynamodb_client = session.client('dynamodb')
-
-table_name = 'WilliamTest'
 term = 'Apple0'
 
 response = dynamodb_client.put_item(
